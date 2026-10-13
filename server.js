@@ -24,7 +24,7 @@ function mode(arr) {
   return arr
     .sort(
       (a, b) =>
-        arr.filter((v) => v === a).length - arr.filter((v) => v === b).length
+        arr.filter((v) => v === a).length - arr.filter((v) => v === b).length,
     )
     .pop();
 }
@@ -74,8 +74,7 @@ app.get("/api", function (req, res) {
               if (round.width > 730) {
                 names.forEach((number) => {
                   let index = round.order.indexOf(number);
-                  if (index === -1) {
-                  } else {
+                  if (index !== -1) {
                     let indices = getAllIndexes(round.order, number);
                     indices.forEach((index) => {
                       if (index + 1 < round.order.length) {
@@ -87,8 +86,7 @@ app.get("/api", function (req, res) {
               } else {
                 names.forEach((number) => {
                   let index = round.order.indexOf(number);
-                  if (index === -1) {
-                  } else {
+                  if (index !== -1) {
                     let indices = getAllIndexes(round.order, number);
                     indices.forEach((index) => {
                       if (index + 1 < round.order.length) {
@@ -114,7 +112,7 @@ app.get("/api", function (req, res) {
             PCPointer: PCPointer,
           });
         });
-    }
+    },
   );
 });
 
@@ -145,7 +143,7 @@ app.post("/api", (req, res) => {
         console.log("1 document inserted");
         res.json({ msg: "Data inserted successfully." });
       });
-    }
+    },
   );
 });
 

@@ -314,9 +314,9 @@ function App() {
         in the end see your results to see how unbiased and random your choices
         were and also the probablity of you pressing a button based on your
         previous presses as the sample space. (Remember if you try to press a
-        different button from the previous one to make your clicks for every
-        button the same then you are being the opposite of random!) The more
-        number of presses you have, the more prominently you can see your bias.
+        different button from the previous one to make your clicks uniform then
+        you are maybe being the opposite of random?) The more number of presses you
+        have, the more prominently you can see your bias.
       </h4>
       <div className="buttons">
         <span className="buttons0">{buttons0}</span>
@@ -377,7 +377,7 @@ function App() {
             </span>
             .
             <br />
-            The probablity of random clicks of all the buttons being within the
+            The probablity of the frequency of clicks of all the buttons being within the
             range of &#177;2 is{" "}
             <span style={{ color: "#006362" }}>
               {entriesLength.PC
@@ -425,7 +425,7 @@ function App() {
             </span>
             .
             <br />
-            The probablity of random clicks of all the buttons being within the
+            The probablity of the frequency of clicks of all the buttons being within the
             range of &#177;2 is{" "}
             <span style={{ color: "#006362" }}>
               {entriesLength.mobile

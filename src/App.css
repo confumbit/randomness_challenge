@@ -67,7 +67,7 @@ h4 {
 .buttons1 {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-evenly;
 }
 .count {
